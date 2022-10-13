@@ -1,4 +1,4 @@
-package ptsc
+package ptsc_gorilla
 
 import (
 	"fmt"
