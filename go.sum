@@ -2,5 +2,5 @@ github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/gorilla/websocket v1.5.0 h1:PPwGk2jz7EePpoHN/+ClbZu8SPxiqlu12wZP/3sWmnc=
 github.com/gorilla/websocket v1.5.0/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
-github.com/mono424/go-pts v0.0.1 h1:L3NR9dppbMr8y0t/gx7YN+tjqYHqVYp3hI1KtajDeVE=
-github.com/mono424/go-pts v0.0.1/go.mod h1:/eaOw0NMy2nLDY52NmET5AYl6pfPdN3u3CpxcOk/QEQ=
+github.com/mono424/go-pts v0.0.2 h1:EqhUkVErWerQijg8JJw2LKca58Y2ah1UgkQuTgiJchc=
+github.com/mono424/go-pts v0.0.2/go.mod h1:/eaOw0NMy2nLDY52NmET5AYl6pfPdN3u3CpxcOk/QEQ=
