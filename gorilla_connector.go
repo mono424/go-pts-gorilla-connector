@@ -36,7 +36,12 @@ func NewConnector(upgrader websocket.Upgrader, errorHandler pts.ErrorHandlerFunc
 				for {
 					_, message, err := conn.ReadMessage()
 					if err != nil {
-						fmt.Println("Error during message reading:", err)
+						switch err.(type) {
+						case *websocket.CloseError:
+							// omit ual websocket close errors
+						default:
+							fmt.Println("Error during message reading:", err)
+						}
 						break
 					}
 					connector.Message(client.Id, message)
