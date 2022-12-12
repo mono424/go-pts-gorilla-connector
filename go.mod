@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/gorilla/websocket v1.5.0
-	github.com/mono424/go-pts v0.0.3
+	github.com/mono424/go-pts v0.0.4
 )
 
 require github.com/google/uuid v1.3.0 // indirect
