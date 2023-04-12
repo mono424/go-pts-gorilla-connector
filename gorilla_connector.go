@@ -10,10 +10,11 @@ import (
 )
 
 func NewConnector(upgrader websocket.Upgrader, errorHandler pts.ErrorHandlerFunc) *pts.Connector {
-	mutex := sync.Mutex{}
 	var connector *pts.Connector
 	connector = pts.NewConnector(
 		func(writer http.ResponseWriter, request *http.Request, properties map[string]interface{}) error {
+			mutex := sync.Mutex{}
+
 			conn, err := upgrader.Upgrade(writer, request, nil)
 			if err != nil {
 				return err
