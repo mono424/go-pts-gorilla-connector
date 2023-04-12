@@ -3,12 +3,14 @@ package ptsc_gorilla
 import (
 	"fmt"
 	"net/http"
+	"sync"
 
 	"github.com/gorilla/websocket"
 	"github.com/mono424/go-pts"
 )
 
 func NewConnector(upgrader websocket.Upgrader, errorHandler pts.ErrorHandlerFunc) *pts.Connector {
+	mutex := sync.Mutex{}
 	var connector *pts.Connector
 	connector = pts.NewConnector(
 		func(writer http.ResponseWriter, request *http.Request, properties map[string]interface{}) error {
@@ -19,6 +21,8 @@ func NewConnector(upgrader websocket.Upgrader, errorHandler pts.ErrorHandlerFunc
 
 			client := connector.Join(
 				func(message []byte) error {
+					mutex.Lock()
+					defer mutex.Unlock()
 					return conn.WriteMessage(websocket.TextMessage, message)
 				},
 				properties,
